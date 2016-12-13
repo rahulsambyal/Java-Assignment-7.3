@@ -1,0 +1,40 @@
+package myPack;
+import java.util.*;
+public class StringSearching {
+public static void main(String args[]){
+	
+	System.out.println("Enter the string");
+	Scanner scan= new Scanner(System.in);
+	String st= scan.next();
+	
+	System.out.println("Enter the substring");
+	String substr= scan.next();
+	boolean available;
+	int len=st.length();
+	    for(int i=0;i<len;i++)
+	    {
+	        for(int j=0;j<substr.length();j++)
+	        {
+	            if(st.charAt(i)==substr.charAt(j))
+	            {
+	                if(j!=substr.length()-1 && i!=st.length()-1)
+	                {
+	                    if(st.charAt(i+1)==substr.charAt(j+1))
+	                    {
+	                        available=true;
+	                        //j++;
+	                        count++;
+	                    }
+	                }
+	            }
+	        }
+	    }
+	    if(available)
+	    {
+	        System.out.println("The character is available " + count + " times");
+	    }
+	    else
+	    {
+	        System.out.println("The character is not availabe");
+	    }
+	}}
